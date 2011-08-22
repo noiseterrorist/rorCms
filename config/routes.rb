@@ -1,4 +1,11 @@
 RorCms::Application.routes.draw do
+  
+  namespace :admin do
+    resources :index
+    root :to => 'index#index'
+  end
+  
+  match '/admin' => 'admin/index#index', :as => :main_admin
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
