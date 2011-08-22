@@ -1,7 +1,8 @@
 RorCms::Application.routes.draw do
   
-  namespace :admin do
+  namespace "admin" do
     resources :index
+    resources :roles
     root :to => 'index#index'
   end
   

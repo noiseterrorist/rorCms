@@ -1,0 +1,15 @@
+<table>
+	<tr>
+		<th>Nazwa</th>
+		<th>Opis</th>
+	</tr>
+	<% @roles.each do |role|%>
+		<tr>
+			<td><%= role.name %></td>
+			<td><%= role.description %></td>
+			<td><%= link_to 'Edit', edit_admin_role_path(role) %></td>
+      <td><%= link_to 'Delete', [:admin, role], :confirm => 'Are you sure?', :method => :delete%></td>
+		</tr>
+	<% end %>
+</table>
+<%= link_to 'Nowa rola', new_admin_role_path %>
