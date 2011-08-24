@@ -4,6 +4,6 @@ class AddUniqueIndexToRoles < ActiveRecord::Migration
   end
 
   def self.down
-    remove_index :roles, :roles_uq1
+    remove_index :roles, :name => :roles_uq1
   end
 end
