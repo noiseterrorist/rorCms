@@ -9,3 +9,8 @@ doc/
 *~
 .project
 .DS_Store
+ror_cms
+.idea
+public/stylesheets/ie.css
+public/stylesheets/screen.css
+public/stylesheets/print.css
