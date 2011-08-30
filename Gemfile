@@ -25,6 +25,9 @@ gem 'sqlite3'
 
 #gem "foreigner", "~> 1.1.1"
 gem "mysql", "~> 2.8.1"
+gem "jquery-rails", "~> 1.0.13"
+gem "sass", "~> 3.1.7"
+gem "compass", ">= 0.11.5"
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
