@@ -1,0 +1,47 @@
+@import "partials/base";
+
+body {
+    background-color: $blueprint-background-color;
+    color: $font-color;
+    font-family: $blueprint-font-family;
+    font-size: $blueprint-font-size;
+}
+
+#main {
+    @include container;
+    a {
+        color: $link-color;
+        &:hover { color: $link-hover-color; }
+        &:focus { color: $link-focus-color; }
+        &:visited { color: $link-visited-color; }
+    }
+    #header {
+        @include column(24);
+    }
+    #flash_notice {
+        @include column(24);
+        border: 1px solid $success-border-color;
+        color: $success-color;
+        text-align: center;
+    }
+    #flash_error {
+        @include column(24);
+        border: 1px solid $error-border-color;
+        color: $error-color;
+        text-align: center;
+    }
+    #main_container {
+        @include column(24);
+        #content {
+            @include column(20);
+        }
+        #menu {
+            @include column(3);
+        }
+    }
+    #footer {
+        border: $standard-border;
+        margin-top: 20px;
+        @include column(24);
+    }
+}
