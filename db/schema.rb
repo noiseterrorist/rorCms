@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110822190245) do
+ActiveRecord::Schema.define(:version => 20110904133626) do
 
   create_table "roles", :force => true do |t|
     t.string   "name",        :null => false
@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(:version => 20110822190245) do
     t.string   "state",          :limit => 40, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "role_id",                      :null => false
   end
+
+  add_index "users", ["email"], :name => "users_uq1", :unique => true
 
 end

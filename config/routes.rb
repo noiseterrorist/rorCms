@@ -1,5 +1,11 @@
 RorCms::Application.routes.draw do
   
+  get "index/index"
+
+  match '/activate/:user_id/:activation_key' => 'users#confirm_email', :constraint => {:user_id => /\d+/,:activation_key => /\w{40}/}, :as => :activate_account
+
+  resources :users
+
   namespace "admin" do
     resources :index
     resources :roles
@@ -7,6 +13,8 @@ RorCms::Application.routes.draw do
   end
   
   match '/admin' => 'admin/index#index', :as => :main_admin
+
+  root :to => 'index#index', :as => :main
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

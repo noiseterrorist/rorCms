@@ -1,4 +1,5 @@
 .bundle
+.sass-cache
 db/*.sqlite3*
 db/schema.mwb.bak
 log/*.log
@@ -14,3 +15,4 @@ ror_cms
 public/stylesheets/ie.css
 public/stylesheets/screen.css
 public/stylesheets/print.css
+config/initializers/setup_mail.rb
